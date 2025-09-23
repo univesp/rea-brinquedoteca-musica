@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="images/fb-share.png">
+  <meta name="author" content="Univesp">
+
+  <meta name="description" property="og:description"
+  content="">
+
+  <meta name="keywords" content="">
+
+  <title>Brinquedoteca Univesp | Tocar</title>
+
+  <link rel="shortcut icon" href="http://apps.univesp.br/common/favicon.ico" type="image/x-icon"/>
+
+  <!-- Arquivos Bootstrap 4.5.3 -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- jQuery and JS bundle w/ Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+  <!-- Ícones por Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- Ícones por Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Tipografia institucional por Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+  <!-- Compartilhamento por jsSocials -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
+
+
+  <!-- Custom CSS -->
+  <!-- <link rel="stylesheet" href="../../../_common/stylesheets/brinquedoteca_geral_1.0.css">
+  <link rel="stylesheet" href="../../../_common/stylesheets/brinquedoteca_unity_1.0.css"> -->
+  <link rel="stylesheet" href="https://apps.univesp.br/brinquedoteca/_common/stylesheets/brinquedoteca_geral_1.0.css">
+  <link rel="stylesheet" href="https://apps.univesp.br/brinquedoteca/_common/stylesheets/brinquedoteca_unity_1.0.css">
+
+<!-- Obrigatório Unity -->
+  <!-- <script src="../../../_common/javascripts/UnityProgress.js"></script> -->
+  <script src="https://apps.univesp.br/brinquedoteca/_common/javascripts/UnityProgress.js"></script>
+  <script src="Build/UnityLoader.js"></script>
+  <script>
+    var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Web.json", {onProgress: UnityProgress});
+  </script>
+
+</head>
+
+<body class="d-flex flex-column">
+
+  <!-- Menu -->
+  <nav>
+    <div class="container d-flex justify-content-between">
+
+      <div class="logo">
+
+        <a class="pularNavegacao" href="#conteudoPrincipal">Pular para Conteúdo Principal</a>
+        <a href="https://univesp.br/" target="_blank">
+          <img src="https://apps.univesp.br/common/colorida-negativa-left.svg" alt="Link para site institucional. Logotipo da universidade formado pela palavra Univesp em letras maiúsculas, sendo a letra V estilizada.">
+        </a>
+
+      </div>
+
+      <!-- <ul class="nav justify-content-end">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="material-icons" aria-label="Opções de Compartilhamento">share</i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="sharing" id="share-buttons"></div>
+          </div>
+        </li>
+
+      </ul> -->
+
+    </div>
+  </nav>
+
+  <!-- Conteúdo -->
+  <main id="conteudoPrincipal">
+
+    <div class="container webgl-content">
+      <div class="brinquedoteca">
+        <a href="https://apps.univesp.br/brinquedoteca" target="_blank" target="_self">
+          <img src="https://apps.univesp.br/brinquedoteca/_common/assets/brinquedoteca-logo.svg"/>
+        </a>
+      </div>
+      <div class="gameFrame">
+        <div id="gameContainer"></div>
+      </div>
+      <div class="game-footer">
+        <div class="telacheia" onclick="gameInstance.SetFullscreen(1)">
+          <i class="material-icons">
+            fullscreen
+          </i>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="fundo"><div class='moldura'></div><div class='container'></div><div class='moldura'></div></div>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="cred-rea">
+        <!-- Comente em caso de adaptação do REA -->
+        <div>
+          Recurso Educacional Aberto (REA) desenvolvido pela <a href="https://univesp.br/" target="blank">Univesp</a>, disponível sob licença <a href="http://apps.univesp.br/common/license_MIT_2020.txt" target="_blank">MIT</a>.
+          <br class="d-none d-md-block"/>Você pode utilizá-lo, compartilhá-lo e modificá-lo.
+        </div>
+        <div>
+          <a href="https://github.com/univesp/rea-brinquedoteca-musica" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a>
+          <button class="btn btn-link" data-toggle="modal" data-target="#creditos">Créditos</button>
+        </div>
+
+        <!-- Descomente em caso de adaptação do REA -->
+        <!-- <p>
+          <span>Recurso Educacional Aberto (REA) adaptado por SEU NOME.</span>
+          <span><a href="#">Versão original da Univesp</a></span>
+        </p> -->
+      </div>
+
+    </div>
+  </footer>
+  <!-- Fim do rodapé -->
+
+  <!-- Créditos -->
+  <div class="modal fade" id="creditos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+          <h6>Governo do Estado de São Paulo</h6>
+          <p>Secretaria de Desenvolvimento Econômico</p>
+
+          <h6>UNIVERSIDADE VIRTUAL DO ESTADO DE SÃO PAULO – UNIVESP</h6>
+          <p><span class="funcao">Presidente</span>Rodolfo Jardim de Azevedo</p>
+          <p><span class="funcao">Diretora Acadêmica</span>Simone Telles Martins Ramos</p>
+
+          <h6>Equipe</h6>
+          <p><span class="funcao">Docente responsável</span>Mônica Cristina Garbin e Roberta Flaborea Favaro</p>
+          <p><span class="funcao">Coordenação</span>Cristian Degasperii Guilhen</p>
+          <p><span class="funcao">Roteirização e Design Instrucional</span>Nádia Pirillo</p>
+          <p><span class="funcao">Design Gráfico e Interfaces</span>Rony Dantas</p>
+          <p><span class="funcao">Programação</span>Máira Sayuri Iida</p>
+
+        </div>
+        <div class="modal-footer">
+          <p></p>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jsSocials -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+  <script>
+  var share = $("#share-buttons");
+  var page_title = $(document).attr('title');
+  var page_url = window.location.href;
+  share.jsSocials({
+    shares: [
+      {
+        share: "facebook",
+        logo: "fab fa-facebook-f",
+      },
+      {
+        share: "twitter",
+        logo: "fab fa-twitter",
+      },
+      {
+        share: "whatsapp",
+        logo: "fab fa-whatsapp",
+      },
+    ],
+    url: page_url,
+    text: 'Confira o REA ' + page_title + '.',
+    showLabel: false,
+    showCount: false,
+    shareIn: "popup",
+  });
+  </script>
+
+  <!-- Analytics. Remova em caso de reutilização do REA -->
+  <script src="https://apps.univesp.br/common/analytics.js"></script>
+
+</body>
+
+</html>
